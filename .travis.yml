@@ -13,7 +13,7 @@ cache:
 
 branches:
   only:
-    - master
+    - dev
 
 before_script:
   - npm install -g @angular/cli
@@ -26,6 +26,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local-dir: dist
+  target-branch: master
   keep-history: false
   on:
-    branch: master
+    branch: dev
